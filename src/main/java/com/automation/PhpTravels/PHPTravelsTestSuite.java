@@ -37,9 +37,8 @@ public class PHPTravelsTestSuite {
 		
 		TestVisaBooking visabooking=new TestVisaBooking();
 		visabooking.visaBooking(driver);
-		
-//		VisaApprovalForm visaapproval=new VisaApprovalForm();
-//		visaapproval.visaApproval(driver);
+	
+
 
 	}
 
