@@ -69,7 +69,96 @@ public class TestVisaBooking {
 		
 		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[2]/input")).click();
 		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[2]/input")).sendKeys("Gerry");
+	   
+		//Nationality in passport
+		WebElement nationality=driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[3]/select"));
+		Select nationalityInPassport=new Select(nationality);
+		nationalityInPassport.selectByIndex(10);
+		
+		//Birthday
+		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[4]/input")).click();
+		//month
+		Thread.sleep(3000);
+		WebElement month=driver.findElement(By.xpath("//*[@id='dp_month']"));
+		Select birthdaymonth=new Select(month);
+		birthdaymonth.selectByIndex(4);
+		
+		//Day
+		WebElement day=driver.findElement(By.xpath("//*[@id='dp_day']"));
+		Select birthdayDay=new Select(day);
+		birthdayDay.selectByIndex(20);
+		//Year
+		WebElement year=driver.findElement(By.xpath("//*[@id='dp_year']"));
+		Select birthdayYear=new Select(year);
+		birthdayYear.selectByIndex(20);
+		//gender
+		
+		driver.findElement(By.xpath("//*[@id='dp_save']")).click();
+
+		WebElement gender= driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[5]/select"));
+		Select selectGender=new Select(gender);
+		selectGender.selectByValue("male");
+		
+		//Passport number
+		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[6]/input")).sendKeys("7654894589");
 	
+		//Passport issued date
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[7]/input")).click();
+	
+	
+		Thread.sleep(2000);
+
+		WebElement passportissuedmonth=driver.findElement(By.xpath("//*[@id='dp_month']"));
+		Select passportissuedmonth1= new Select(passportissuedmonth);
+		passportissuedmonth1.selectByIndex(6);
+		
+		WebElement passportissuedday=driver.findElement(By.xpath("//*[@id='dp_day']"));
+		Select passportissuedday1=new Select(passportissuedday);
+		passportissuedday1.selectByIndex(23);
+		
+		WebElement passportissuedyear=driver.findElement(By.xpath("//*[@id='dp_year']"));
+		Select passportissuedyear1=new Select(passportissuedyear);
+		passportissuedyear1.selectByIndex(23);
+		
+		driver.findElement(By.xpath("//*[@id='dp_save']")).click();
+		//Passport expiration date
+
+		Thread.sleep(2000);
+
+		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[8]/input")).click();
+		Thread.sleep(2000);
+
+		
+		
+		WebElement passportexpirationmonth=driver.findElement(By.xpath("//*[@id='dp_month']"));
+		Select passportexpirationmonth1= new Select(passportexpirationmonth);
+		passportexpirationmonth1.selectByIndex(9);
+		
+		WebElement passportexpirationday=driver.findElement(By.xpath("//*[@id='dp_day']"));
+		Select passportexpirationday1=new Select(passportexpirationday);
+		passportexpirationday1.selectByIndex(23);
+		
+		WebElement passportexpirationyear=driver.findElement(By.xpath("//*[@id='dp_year']"));
+		Select passportexpirationyear1=new Select(passportexpirationyear);
+		passportexpirationyear1.selectByIndex(20);
+		driver.findElement(By.xpath("//*[@id='dp_save']")).click();
+		
+		//Passport issued place
+		WebElement issuedPlace=driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[2]/div[9]/select"));
+		Select passportIssuedPlace=new Select(issuedPlace);
+		passportIssuedPlace.selectByIndex(10);
+		
+		//India visa Type
+		WebElement visatype=driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[3]/div[1]/select"));
+		Select indiaVisaType=new Select(visatype);
+		indiaVisaType.selectByValue("business");
+		
+		
+
+		
+		
 	}
 	
 	
