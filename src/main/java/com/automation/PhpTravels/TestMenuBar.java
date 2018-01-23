@@ -22,21 +22,29 @@ public class TestMenuBar {
 	
 	
 	
-	public void testMainToolBar(WebDriver driver) throws InterruptedException{
+	public void testMainToolBar(final WebDriver driver) throws InterruptedException{
 		
 		
 		
 		
 		Thread.sleep(2000); 
 		
+		
+
+		
+		
 		//Flights is too slow , makes the run very slow
 		
-		driver.findElement(By.xpath("//*[@id='offcanvas-menu']/ul/li[1]/a/span[2]")).click();
+		WebElement element = driver.findElement(	By.xpath("//*[@id='offcanvas-menu']/ul/li[1]/a/span[2]"));
+		
+		element.click();
+		
 		
 		driver.navigate().back();
 		
 		//Hotels
 		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//*[@id='offcanvas-menu']/ul/li[2]/a/span[2]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id='body-section']/div[5]/div[3]/div/table/tbody/tr[1]/td/div[2]/div/div[5]/a/button")).click();

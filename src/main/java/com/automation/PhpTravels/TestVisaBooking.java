@@ -154,6 +154,7 @@ public class TestVisaBooking {
 		WebElement visatype=driver.findElement(By.xpath("//*[@id='body-section']/div[1]/span/div/div[4]/section[2]/div[3]/div[1]/select"));
 		Select indiaVisaType=new Select(visatype);
 		indiaVisaType.selectByValue("business");
+		driver.quit();
 		
 		
 

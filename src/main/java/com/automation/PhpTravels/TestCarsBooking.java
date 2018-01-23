@@ -46,7 +46,7 @@ public class TestCarsBooking {
 		driver.findElement(By.xpath("//*[@id='CARTRAWLER']/form/div[9]/input[5]")).click();
 		
 		
-		//driver.quit();
+		driver.navigate().back();
 		
 	}
 

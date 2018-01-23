@@ -24,20 +24,20 @@ public class PHPTravelsTestSuite {
 
 		 TestMenuBar testMenuBar = new TestMenuBar();
 		 testMenuBar.testMainToolBar(driver);
-		// TestHotelBooking testHotelBooking=new TestHotelBooking();
-		// testHotelBooking.testHotelBooking1(driver);
+		 TestHotelBooking testHotelBooking=new TestHotelBooking();
+		 testHotelBooking.testHotelBooking1(driver);
 //		TestFlightBooking testFlightBooking = new TestFlightBooking();
 //		testFlightBooking.testFlightBooking1(driver);
 
-//		 TestToursBooking testTours=new TestToursBooking();
-//		 testTours.testToursBooking1(driver);
+		 TestToursBooking testTours=new TestToursBooking();
+		 testTours.testToursBooking1(driver);
 		
-//		TestCarsBooking testcarBooking=new TestCarsBooking();
-//		testcarBooking.testCarsBooking1(driver);
-		
-//		TestVisaBooking visabooking=new TestVisaBooking();
-//		visabooking.visaBooking(driver);
+		TestCarsBooking testcarBooking=new TestCarsBooking();
+		testcarBooking.testCarsBooking1(driver);
 	
+		TestVisaBooking visabooking=new TestVisaBooking();
+		visabooking.visaBooking(driver);
+
 
 
 	}

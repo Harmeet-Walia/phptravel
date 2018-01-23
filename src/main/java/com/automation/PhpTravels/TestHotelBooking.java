@@ -18,12 +18,16 @@ public class TestHotelBooking {
 		driver.findElement(By.xpath("//*[@id='select2-drop']/div/input")).sendKeys("Amsterdam");
 		driver.findElement(By.xpath("//*[@id='select2-drop']/ul/li/ul/li/div/span")).click();
 		
-		
+		//check in Date
 		driver.findElement(By.name("checkin")).click();
-		//Thread.sleep(3000);
-		driver.findElement(By.xpath("/html/body/div[16]/div[1]/table/tbody/tr[4]/td[6]")).click();
-		driver.findElement(By.xpath("/html/body/div[17]/div[1]/table/tbody/tr[5]/td[4]")).click();
+		//Thread.sleep(4000);
+		driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody/tr[4]/td[4]")).click(); //24th jan
+//		driver.findElement(By.xpath("/html/body/div[17]/div[1]/table/tbody/tr[5]/td[4]")).click();
 		
+		//check out date
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/thead/tr[1]/th[3]")).click();//Next for February
+		driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/tbody/tr[2]/td[4]")).click(); //7th Feb
 		WebElement AdultsDropDown=driver.findElement(By.id("adults"));
 		Select NoOfAdults= new Select(AdultsDropDown);
 		NoOfAdults.selectByIndex(3);
@@ -34,6 +38,7 @@ public class TestHotelBooking {
 		Thread.sleep(3000);
 		
 		driver.findElement(By.xpath("//*[@id='HOTELS']/form/div[3]/div[3]/button")).submit();
+		driver.navigate().back();
 		
 		
 		

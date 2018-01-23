@@ -21,7 +21,7 @@ public class TestToursBooking {
 
 		// Checkin--sometimes it works...sometimes it doesnot ;-(
 		driver.findElement(By.xpath("//*[@id='tchkin']/input")).click();
-		 driver.findElement(By.xpath("/html/body/div[17]/div[1]/table/tbody/tr[4]/td[6]")).click(); 
+		 driver.findElement(By.xpath("/html/body/div[16]/div[1]/table/tbody/tr[4]/td[6]")).click(); 
 		 //26Th jan
 
 		// No of Guests
