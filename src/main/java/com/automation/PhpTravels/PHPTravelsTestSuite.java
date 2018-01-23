@@ -22,8 +22,8 @@ public class PHPTravelsTestSuite {
 	public void runTests() throws InterruptedException {
 		WebDriver driver = getDriver();
 
-		// TestMenuBar testMenuBar = new TestMenuBar();
-		// testMenuBar.testMainToolBar(driver);
+		 TestMenuBar testMenuBar = new TestMenuBar();
+		 testMenuBar.testMainToolBar(driver);
 		// TestHotelBooking testHotelBooking=new TestHotelBooking();
 		// testHotelBooking.testHotelBooking1(driver);
 //		TestFlightBooking testFlightBooking = new TestFlightBooking();
@@ -35,8 +35,8 @@ public class PHPTravelsTestSuite {
 //		TestCarsBooking testcarBooking=new TestCarsBooking();
 //		testcarBooking.testCarsBooking1(driver);
 		
-		TestVisaBooking visabooking=new TestVisaBooking();
-		visabooking.visaBooking(driver);
+//		TestVisaBooking visabooking=new TestVisaBooking();
+//		visabooking.visaBooking(driver);
 	
 
 
