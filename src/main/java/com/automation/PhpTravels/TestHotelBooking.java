@@ -21,7 +21,7 @@ public class TestHotelBooking {
 		//check in Date
 		driver.findElement(By.name("checkin")).click();
 		//Thread.sleep(4000);
-		driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody/tr[4]/td[4]")).click(); //24th jan
+		driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody/tr[5]/td[4]")).click(); //24th jan
 //		driver.findElement(By.xpath("/html/body/div[17]/div[1]/table/tbody/tr[5]/td[4]")).click();
 		
 		//check out date

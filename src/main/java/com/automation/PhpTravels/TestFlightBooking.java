@@ -10,32 +10,37 @@ public class TestFlightBooking {
 	public void testFlightBooking1(WebDriver driver) throws InterruptedException {
 
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/div/div/div[1]/div/ul/li[2]/a/span")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id='flight']/form/div[1]/div[2]/div/label")).click();
-		driver.findElement(By.id("s2id_autogen14")).click();
-
-		driver.findElement(By.xpath("//div[@id='select2-drop']/div/input")).sendKeys("paris");
-		driver.findElement(By.xpath("//*[@id='select2-drop']/ul/li[3]/div/span")).click();
-
-		driver.findElement(By.id("s2id_autogen16")).click();
-     //Destination
 		
-		driver.findElement(By.xpath("//*[@id='select2-drop']/div/input")).sendKeys("Berlin");
-		// driver.findElement(By.xpath("//div[[@id='select2-drop']/div/input")).sendKeys("Berlin");
-		driver.findElement(By.xpath("//*[@id='select2-drop']/ul/li[1]/div/span")).click();
+		driver.findElement(By.xpath("//span[contains(text(), 'Flights')]")).click();
 		
-		//Departure Date
-		driver.findElement(By.name("departure")).click();
-		driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody/tr[3]/td[7]")).click();
 		
-		//Return date
-		driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/tbody/tr[4]/td[5]")).click();
-		
-		//Classtype  dropdown selection
-		WebElement classType=driver.findElement(By.xpath("//*[@id='flight']/form/div[3]/div[3]/div/select"));
-		Select selectclassType=new Select(classType);
-		 selectclassType.selectByIndex(2);
+	Thread.sleep(3000);
+	driver.findElement(By.xpath("//input[starts-with(@id, 'airports-inline-orig-')]")).sendKeys("Mumbai");
+//	driver.findElement(By.xpath("//input[starts-with(@id,'airports-inline-dest-')]")).sendKeys("Mumbai");
+	
+//		driver.findElement(By.id("s2id_autogen14")).click();
+//
+//		driver.findElement(By.xpath("//div[@id='select2-drop']/div/input")).sendKeys("paris");
+//		driver.findElement(By.xpath("//*[@id='select2-drop']/ul/li[3]/div/span")).click();
+//
+//		driver.findElement(By.id("s2id_autogen16")).click();
+//     //Destination
+//		
+//		driver.findElement(By.xpath("//*[@id='select2-drop']/div/input")).sendKeys("Berlin");
+//		// driver.findElement(By.xpath("//div[[@id='select2-drop']/div/input")).sendKeys("Berlin");
+//		driver.findElement(By.xpath("//*[@id='select2-drop']/ul/li[1]/div/span")).click();
+//		
+//		//Departure Date
+//		driver.findElement(By.name("departure")).click();
+//		driver.findElement(By.xpath("/html/body/div[14]/div[1]/table/tbody/tr[3]/td[7]")).click();
+//		
+//		//Return date
+//		driver.findElement(By.xpath("/html/body/div[15]/div[1]/table/tbody/tr[4]/td[5]")).click();
+//		
+//		//Classtype  dropdown selection
+//		WebElement classType=driver.findElement(By.xpath("//*[@id='flight']/form/div[3]/div[3]/div/select"));
+//		Select selectclassType=new Select(classType);
+//		 selectclassType.selectByIndex(2);
 		
 		 
 		 
