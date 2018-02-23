@@ -22,14 +22,18 @@ public class PHPTravelsTestSuite {
 
 	public void runTests() throws InterruptedException {
 		WebDriver driver = getDriver();
+		
+		phptravelsLogin login=new phptravelsLogin();
+		login.phplogin(driver);
+		
 
 		// TestMenuBar testMenuBar = new TestMenuBar();
 //		 testMenuBar.testMainToolBar(driver);
-		 TestHotelBooking testHotelBooking=new TestHotelBooking();
-		 testHotelBooking.testHotelBooking1(driver);
+//		 TestHotelBooking testHotelBooking=new TestHotelBooking();
+//		 testHotelBooking.testHotelBooking1(driver);
 		
-//        TestFlightBooking testFlightBooking = new TestFlightBooking();
-//		testFlightBooking.testFlightBooking1(driver);
+//         TestFlightBooking testFlightBooking = new TestFlightBooking();
+//	     testFlightBooking.testFlightBooking1(driver);
 
 //		 TestToursBooking testTours=new TestToursBooking();
 //		 testTours.testToursBooking1(driver);
@@ -49,8 +53,8 @@ public class PHPTravelsTestSuite {
 		System.setProperty("webdriver.chrome.driver", "/Users/rawalia/Harmeet/SeleniumDriver/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to("http://www.phptravels.net/");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		return driver;
 
 	}

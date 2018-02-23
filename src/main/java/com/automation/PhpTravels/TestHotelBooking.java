@@ -10,6 +10,7 @@ public class TestHotelBooking {
 	public void testHotelBooking1(WebDriver driver) throws InterruptedException{
 		Thread.sleep(3000);
 		
+		
 		//click on Hotels
 		driver.findElement(By.xpath("//*[@id='body-section']/div[1]/div/div/div[1]/div/ul/li[1]/a/span")).click();
 		
